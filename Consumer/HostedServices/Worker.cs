@@ -11,9 +11,9 @@ namespace Consumer.HostedServices
 {
     public class Worker : BackgroundService
     {
-        private readonly ILogger<Worker> _logger;
-        private readonly KafkaConfig _kafkaConfig;
         private readonly IEventBusConsumer _consumer;
+        private readonly KafkaConfig _kafkaConfig;
+        private readonly ILogger<Worker> _logger;
 
         public Worker(ILogger<Worker> logger, IOptions<KafkaConfig> kafkaConfig, IEventBusConsumer consumer)
         {

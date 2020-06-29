@@ -15,7 +15,7 @@ namespace Producer.EventBus
         public KafkaProducer(IOptions<KafkaConfig> kafkaConfig, ILogger<Worker> logger)
         {
             _logger = logger;
-            KafkaConfig kafkaConfig1 = kafkaConfig.Value;
+            var kafkaConfig1 = kafkaConfig.Value;
             var producerConfig = new ProducerConfig
             {
                 BootstrapServers = kafkaConfig1.BootstrapServers,
