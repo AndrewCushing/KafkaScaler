@@ -1,4 +1,4 @@
-﻿namespace WorkerService.EventBus
+﻿namespace Producer.EventBus
 {
     public interface IEventBusProducer
     {

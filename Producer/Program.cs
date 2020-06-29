@@ -1,9 +1,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WorkerService.Config;
-using WorkerService.EventBus;
+using Producer.Config;
+using Producer.EventBus;
+using Producer.HostedServices;
 
-namespace WorkerService
+namespace Producer
 {
     public class Program
     {

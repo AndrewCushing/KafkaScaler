@@ -1,10 +1,11 @@
-﻿using Confluent.Kafka;
+﻿using System.Net;
+using Confluent.Kafka;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System.Net;
-using WorkerService.Config;
+using Producer.Config;
+using Producer.HostedServices;
 
-namespace WorkerService.EventBus
+namespace Producer.EventBus
 {
     public class KafkaProducer : IEventBusProducer
     {
