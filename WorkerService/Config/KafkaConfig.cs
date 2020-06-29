@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-
-namespace WorkerService.Config
+﻿namespace WorkerService.Config
 {
     public class KafkaConfig
     {

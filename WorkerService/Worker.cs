@@ -1,20 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using WorkerService.Config;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using WorkerService.EventBus;
 
 namespace WorkerService
 {
     public class Worker : BackgroundService
     {
-        private readonly ILogger<Worker> _logger;
         private readonly IEventBusProducer _eventBusProducer;
+        private readonly ILogger<Worker> _logger;
 
         public Worker(ILogger<Worker> logger, IEventBusProducer eventBusProducer)
         {
@@ -31,7 +27,6 @@ namespace WorkerService
                 _logger.LogDebug("Worker produced a message.");
                 await Task.Delay(1000, stoppingToken);
             }
-            
         }
     }
 }

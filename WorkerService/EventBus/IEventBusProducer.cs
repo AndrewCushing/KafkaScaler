@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace WorkerService.EventBus
+﻿namespace WorkerService.EventBus
 {
     public interface IEventBusProducer
     {
