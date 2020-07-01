@@ -9,13 +9,13 @@ using Microsoft.Extensions.Options;
 
 namespace Consumer.HostedServices
 {
-    public class Worker : BackgroundService
+    public class HostedConsumerService : BackgroundService
     {
         private readonly IEventBusConsumer _consumer;
         private readonly KafkaConfig _kafkaConfig;
-        private readonly ILogger<Worker> _logger;
+        private readonly ILogger<HostedConsumerService> _logger;
 
-        public Worker(ILogger<Worker> logger, IOptions<KafkaConfig> kafkaConfig, IEventBusConsumer consumer)
+        public HostedConsumerService(ILogger<HostedConsumerService> logger, IOptions<KafkaConfig> kafkaConfig, IEventBusConsumer consumer)
         {
             _logger = logger;
             _kafkaConfig = kafkaConfig.Value;

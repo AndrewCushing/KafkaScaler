@@ -18,7 +18,7 @@ namespace Consumer
             return Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddHostedService<Worker>();
+                    services.AddHostedService<HostedConsumerService>();
                     services.Configure<KafkaConfig>(hostContext.Configuration.GetSection(nameof(KafkaConfig)));
                     services.AddSingleton<IEventBusConsumer, KafkaConsumer>();
                 });

@@ -12,9 +12,9 @@ namespace Consumer.EventBus
     {
         private readonly IConsumer<Ignore, string> _consumer;
         private readonly KafkaConfig _kafkaConfig;
-        private readonly ILogger<Worker> _logger;
+        private readonly ILogger<HostedConsumerService> _logger;
 
-        public KafkaConsumer(IOptions<KafkaConfig> kafkaConfig, ILogger<Worker> logger)
+        public KafkaConsumer(IOptions<KafkaConfig> kafkaConfig, ILogger<HostedConsumerService> logger)
         {
             _kafkaConfig = kafkaConfig.Value;
             _logger = logger;

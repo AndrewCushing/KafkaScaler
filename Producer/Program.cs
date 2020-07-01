@@ -18,7 +18,7 @@ namespace Producer
             return Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddHostedService<Worker>();
+                    services.AddHostedService<HostedProducerService>();
                     services.Configure<KafkaConfig>(hostContext.Configuration.GetSection(nameof(KafkaConfig)));
                     services.AddSingleton<IEventBusProducer, KafkaProducer>();
                 });

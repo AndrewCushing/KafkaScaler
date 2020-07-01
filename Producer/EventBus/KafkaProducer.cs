@@ -9,10 +9,10 @@ namespace Producer.EventBus
 {
     public class KafkaProducer : IEventBusProducer
     {
-        private readonly ILogger<Worker> _logger;
+        private readonly ILogger<HostedProducerService> _logger;
         private readonly IProducer<Null, string> _producer;
 
-        public KafkaProducer(IOptions<KafkaConfig> kafkaConfig, ILogger<Worker> logger)
+        public KafkaProducer(IOptions<KafkaConfig> kafkaConfig, ILogger<HostedProducerService> logger)
         {
             _logger = logger;
             var kafkaConfig1 = kafkaConfig.Value;
